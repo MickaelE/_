@@ -1,42 +1,44 @@
-import React, {useEffect,useState} from 'react';
-import axios from 'axios';
+import React from "react";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput,MDBSelect } from 'mdb-react-ui-kit';
 
-const Registrations = ({ registrations }) => {
-
-    const [Data,setData]=useState({
-        _id:'',
-        Descrlagiption:''
-    })
-    const [colorsData,setColorsData]=useState([])
-    useEffect(()=>{
-        axios.get('http://localhost:8080/api/registration/')
-            .then(res=>{
-                console.log('Response from main API: ',res)
-                console.log('Home Data: ',res.data._id)
-                let companyData=res.data;
-                setData({_id:companyData._id,lag:companyData.lag})
-                console.log('Colors Data: ',res.data.data)
-                setColorsData(res.data.data)
-            })
-            .catch(err=>{
-                console.log(err);
-            })
-    },[])
+const RegistrationPage = () => {
     return (
-        <div>
-            {registrations.map((registration) => (
-                <div class="card">
-                    <div class="card-body">
-                         <h5 class="card-title">{Data._id}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{Data.Lag}</h6>
-                        <p class="card-text">{Data.personalia.namn_barn}</p>
+        <MDBContainer>
+            <MDBRow>
+                <MDBCol md="6">
+                    <form>
 
-                    </div>
-                </div>
-            ))}
-
-        </div>
-    )
+                        <div className="grey-text">
+                            <MDBInput label="Ditt namn" icon="user" group type="text" validate error="wrong"
+                                      success="right" />
+                            <MDBInput label="Din email" icon="envelope" group type="email" validate error="wrong"
+                                      success="right" />
+                            <MDBInput label="emailet en gång till" icon="exclamation-triangle" group type="text" validate
+                                      error="wrong" success="right" />
+                            <select className="browser-default custom-select">
+                                <option>Din åldersgrupp</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <MDBInput label="Din adress" icon="lock" group type="password" validate />
+                            <MDBInput label="Ditt telefonnummer" icon="lock" group type="password" validate />
+                            <MDBInput label="Storlek på Tröja" icon="lock" group type="password" validate />
+                            <MDBInput label="Storlek på shorts" icon="lock" group type="password" validate />
+                            <MDBInput label="Storlek på strumpor" icon="lock" group type="password" validate />
+                            <MDBInput label="Mammas namn" icon="lock" group type="password" validate />
+                            <MDBInput label="Mammas Mobilnr" icon="lock" group type="password" validate />
+                            <MDBInput label="Pappas namn" icon="lock" group type="password" validate />
+                            <MDBInput label="Pappas Mobilnr" icon="lock" group type="tel" validate />
+                        </div>
+                        <div className="text-center">
+                            <MDBBtn color="primary">Register</MDBBtn>
+                        </div>
+                    </form>
+                </MDBCol>
+            </MDBRow>
+        </MDBContainer>
+    );
 };
 
-export default Registrations
+export default RegistrationPage;
