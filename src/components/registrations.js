@@ -1,42 +1,69 @@
-import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput,MDBSelect } from 'mdb-react-ui-kit';
+import React,{ Fragment } from "react";
+import { MDBContainer, MDBBtn, MDBInput } from 'mdb-react-ui-kit';
+import axios from 'axios';
 
 const RegistrationPage = () => {
+    function handleSubmit(e) {
+        e.preventDefault();
+        const article = { title: 'React POST Request Example' };
+        axios.post('https://reqres.in/api/articles', article)
+            .then(response => this.setState({ articleId: response.data.id }));
+        console.log('You clicked submit.');
+    }
     return (
         <MDBContainer>
-            <MDBRow>
-                <MDBCol md="6">
-                    <form>
-
-                        <div className="grey-text">
-                            <MDBInput label="Ditt namn" icon="user" group type="text" validate error="wrong"
+                    <Fragment>
+                        <div className="form-group">
+                            <MDBInput label="Ditt namn" icon="user" type="text" validate={"true"} error="wrong"
                                       success="right" />
-                            <MDBInput label="Din email" icon="envelope" group type="email" validate error="wrong"
+                        </div>
+                            <div className="form-group">
+                            <MDBInput label="Din email" icon="envelope" type="email" validate={"true"} error="wrong"
                                       success="right" />
-                            <MDBInput label="emailet en gång till" icon="exclamation-triangle" group type="text" validate
+                            </div>
+                        <div className="form-group">
+                            <MDBInput label="emailet en gång till" icon="exclamation-triangle" type="text" validate={"true"}
                                       error="wrong" success="right" />
+                        </div>
+                        <div className="form-group">
                             <select className="browser-default custom-select">
                                 <option>Din åldersgrupp</option>
                                 <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>
                             </select>
-                            <MDBInput label="Din adress" icon="lock" group type="password" validate />
-                            <MDBInput label="Ditt telefonnummer" icon="lock" group type="password" validate />
-                            <MDBInput label="Storlek på Tröja" icon="lock" group type="password" validate />
-                            <MDBInput label="Storlek på shorts" icon="lock" group type="password" validate />
-                            <MDBInput label="Storlek på strumpor" icon="lock" group type="password" validate />
-                            <MDBInput label="Mammas namn" icon="lock" group type="password" validate />
-                            <MDBInput label="Mammas Mobilnr" icon="lock" group type="password" validate />
-                            <MDBInput label="Pappas namn" icon="lock" group type="password" validate />
-                            <MDBInput label="Pappas Mobilnr" icon="lock" group type="tel" validate />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Din adress" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Ditt telefonnummer" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Storlek på Tröja" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Storlek på shorts" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Storlek på strumpor" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Mammas namn" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Mammas Mobilnr" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Pappas namn" icon="lock" type="password" validate={"true"} />
+                        </div>
+                        <div className="form-group">
+                            <MDBInput label="Pappas Mobilnr" icon="lock" type="tel" validate={"true"} />
                         </div>
                         <div className="text-center">
-                            <MDBBtn color="primary">Register</MDBBtn>
+                            <MDBBtn color="primary" onClick={handleSubmit}>Skicka</MDBBtn>
                         </div>
-                    </form>
-                </MDBCol>
-            </MDBRow>
+                    </Fragment>
         </MDBContainer>
     );
 };
