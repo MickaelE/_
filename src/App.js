@@ -58,7 +58,7 @@ class App extends Component {
                 </MDBNavbar>
                     <div
                         className='p-5 text-center bg-image'
-                        style={{ backgroundImage: "url('http://localhost:3000/static/media/banner.bbb41d2e.png')", height: 100 }}
+                        style={{ backgroundImage: "url('https://i.postimg.cc/RVsNK02p/banner.png')", height: 100 }}
                     />
 
             </header>

@@ -1,13 +1,12 @@
 import React,{ Fragment } from "react";
 import { MDBContainer, MDBBtn, MDBInput } from 'mdb-react-ui-kit';
-import axios from 'axios';
-
+import {PostRequestAsyncAwait} from './PostRequestAsyncAwait'
 const RegistrationPage = () => {
     function handleSubmit(e) {
         e.preventDefault();
-        const article = { title: 'React POST Request Example' };
-        axios.post('https://reqres.in/api/articles', article)
-            .then(response => this.setState({ articleId: response.data.id }));
+      let post =  new PostRequestAsyncAwait();
+
+      post.componentDidMount();
         console.log('You clicked submit.');
     }
     return (
