@@ -10,6 +10,7 @@
     "autosave": "^1.0.3",
     "clsx": "^1.1.1",
     "focus-trap-react": "^8.5.0",
+    "mdb-cli": "^3.3.0",
     "mdb-react-ui-kit": "^1.0.0-beta5",
     "mdbreact": "^5.0.2",
     "react": "^17.0.1",
