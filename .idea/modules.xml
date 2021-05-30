@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ot-backend/.idea/ot-backend.iml" filepath="$PROJECT_DIR$/../ot-backend/.idea/ot-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/ot-fotboll.iml" filepath="$PROJECT_DIR$/ot-fotboll.iml" />
     </modules>
   </component>

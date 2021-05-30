@@ -1,10 +1,10 @@
 import React,{ Fragment } from "react";
 import { MDBContainer, MDBBtn, MDBInput } from 'mdb-react-ui-kit';
-import {PostRequestAsyncAwait} from './PostRequestAsyncAwait'
+import CreateRegistration from './CreateRegistration'
 const RegistrationPage = () => {
     function handleSubmit(e) {
         e.preventDefault();
-      let post =  new PostRequestAsyncAwait();
+      let post =  new CreateRegistration();
 
       post.componentDidMount();
         console.log('You clicked submit.');

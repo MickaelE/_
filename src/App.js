@@ -2,6 +2,8 @@
 // <Registrations registrations={this.state.registrations} />
 import React, {Component} from 'react';
 import RegistrationPage from './components/registrations';
+import CreateRegistration from './components/CreateRegistration';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {
     MDBCard,
     MDBCardBody,
@@ -35,19 +37,26 @@ class App extends Component {
 
     render() {
         return (
+
             <>
+                <Router>
+                    <div>
+                        <Route exact path='/component/CreateRegistration' component={CreateRegistration} />
+                    </div>
+                </Router>
                 <header>
                     <MDBNavbar expand='lg' light bgColor='white'>
                         <MDBContainer fluid>
                             <MDBNavbarToggler
                                 aria-controls='navbarExample01'
                                 aria-expanded='false'
-                                aria-label='Toggle navigation'
-                            >
+                                aria-label='Toggle navigation'>
                                 <MDBIcon fas icon='bars'/>
                             </MDBNavbarToggler>
                             <div className='collapse navbar-collapse' id='navbarExample01'>
+
                                 <MDBNavbarNav right className='mb-2 mb-lg-0'>
+
                                     <MDBNavbarItem active>
                                         <MDBNavbarLink aria-current='page' href='#'>
                                             Hem
@@ -57,11 +66,12 @@ class App extends Component {
                                         <MDBNavbarLink href='#'>Ungdomsidrott</MDBNavbarLink>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem>
-                                        <MDBNavbarLink href='#'>Anmälan</MDBNavbarLink>
+                                        <MDBNavbarLink href='/components/CreateRegistration'>Anmälan</MDBNavbarLink>
                                     </MDBNavbarItem>
                                     <MDBNavbarItem>
                                         <MDBNavbarLink href='#'>Om</MDBNavbarLink>
                                     </MDBNavbarItem>
+
                                 </MDBNavbarNav>
                             </div>
                         </MDBContainer>
@@ -70,7 +80,6 @@ class App extends Component {
                         className='p-5 text-center bg-image'
                         style={{backgroundImage: "url('https://i.postimg.cc/RVsNK02p/banner.png')", height: 100}}
                     />
-
                 </header>
                 <MDBContainer>
                 <MDBRow>
