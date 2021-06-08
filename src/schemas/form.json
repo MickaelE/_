@@ -1,6 +1,6 @@
 {
-  "title": "A registration form",
-  "description": "A simple form example with various formData return types per tab.",
+  "title": "Registrera dig",
+  "description": ".",
   "type": "object",
   "properties": {
     "ownData": {

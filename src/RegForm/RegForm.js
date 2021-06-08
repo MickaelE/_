@@ -46,12 +46,6 @@ export default function RegForm({}: Props) {
             onUpload={onUpload} /* optional */
             onError={onError} /* optional */
 
-            /* Optional Prop for custom functions to be executed for transforming data */
-            interceptors={{
-                translateRatings: (givenData, uiData) => ({ givenData, uiData }),
-            }}
-
-
             /* Optional Prop to auto submit form on press of enter */
             submitOnEnter
         />

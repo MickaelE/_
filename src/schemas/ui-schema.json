@@ -10,13 +10,13 @@
     },
     "tabs": {
       "style": {
-        "width": "29vw",
-        "marginTop": 10
+        "width": "25vw",
+        "marginTop": 5
       }
     },
     "tab": {
       "style": {
-        "minWidth": 81
+        "minWidth": 70
       }
     }
   },
