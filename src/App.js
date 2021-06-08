@@ -1,9 +1,8 @@
 //src/App.js
 // <Registrations registrations={this.state.registrations} />
 import React, {Component} from 'react';
-import RegistrationPage from './components/registrations';
-import CreateRegistration from './components/CreateRegistration';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import RegForm from './RegForm/RegForm'
+import MyWindowPortal from './MyWindowPortal'
 import {
     MDBCard,
     MDBCardBody,
@@ -24,11 +23,18 @@ import {
     MDBTypography,
     MDBFooter
 } from 'mdb-react-ui-kit';
+import {MDBBtn} from "mdbreact";
 
 class App extends Component {
-    static getDerivedStateFromError(error) {
-        // Update state so the next render will show the fallback UI.
-        return {hasError: true};
+
+    toggleWindowPortal() {
+        this.setState(state => ({
+            ...state,
+            showWindowPortal: !state.showWindowPortal,
+        }));
+    }
+    closeWindowPortal() {
+        this.setState({ showWindowPortal: false })
     }
 
     componentDidMount() {
@@ -39,11 +45,6 @@ class App extends Component {
         return (
 
             <>
-                <Router>
-                    <div>
-                        <Route exact path='/component/CreateRegistration' component={CreateRegistration} />
-                    </div>
-                </Router>
                 <header>
                     <MDBNavbar expand='lg' light bgColor='white'>
                         <MDBContainer fluid>
@@ -133,15 +134,14 @@ class App extends Component {
                                 <li> Strumpor storlekar: 31-33, 34-36, 37-39, 40-42, 43-45</li>
                                 <li>Verksamhetsanpassad utrustning för sin åldersgrupp.</li>
                                 <li>Säsongsavslutning med priser/medaljer.</li>
-</ul>
+                        </ul>
                         </MDBTypography>
                     </MDBCol>
                     <MDBCol size='4' className='col-form'>
                         <MDBCard border="secondary" alignment='center' style={{maxWidth: '22rem'}}>
                             <MDBCardBody>
-                                <MDBCardTitle>Registrera dig.</MDBCardTitle>
                                 <MDBCardText alignment='center'>
-                                    <RegistrationPage/>
+                                  <RegForm />
                                 </MDBCardText>
                             </MDBCardBody>
                         </MDBCard>

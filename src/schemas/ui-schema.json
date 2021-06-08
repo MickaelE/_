@@ -1,0 +1,75 @@
+{
+  "ui:page": {
+    "ui:layout": "tabs",
+    "props": {
+      "tabIndex": 1,
+      "ui:schemaErrors": true
+    },
+    "style": {
+      "boxShadow": "none"
+    },
+    "tabs": {
+      "style": {
+        "width": "29vw",
+        "marginTop": 10
+      }
+    },
+    "tab": {
+      "style": {
+        "minWidth": 81
+      }
+    }
+  },
+  "string": {
+    "firstName": {
+      "ui:autofocus": true,
+      "ui:emptyValue": ""
+    },
+    "react-select": {
+      "ui:widget": "material-select",
+      "ui:isClearable": true,
+      "ui:placeholder": "Example Placeholder"
+    },
+    "upload": {
+      "ui:widget": "upload",
+      "ui:props": {
+        "variant": "outlined",
+        "accept": "image/*",
+        "isMulti": true,
+        "buttonTitle": "Upload",
+        "icon": "add_circle"
+      }
+    },
+    "bio": {
+      "ui:widget": "textarea",
+      "ui:options": "rich-text-editor"
+    },
+    "password": {
+      "ui:widget": "password",
+      "ui:help": "Hint: Make it strong!",
+      "ui:validations": {
+        "minLength": {
+          "value": 3,
+          "message": "'Password' must be at least 3 characters",
+          "inline": true
+        }
+      }
+    },
+    "date": {
+      "ui:activeCompColor": "red",
+      "ui:widget": "material-date"
+    },
+    "telephone": {
+      "ui:options": {
+        "inputType": "tel"
+      },
+      "ui:validations": {
+        "minLength": {
+          "value": 10,
+          "message": "'Telephone' must be at least 10 digits",
+          "inline": true
+        }
+      }
+    }
+  }
+}

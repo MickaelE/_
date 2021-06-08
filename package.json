@@ -17,6 +17,8 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.1",
+    "react-jsonschema-form": "^1.8.1",
+    "react-jsonschema-form-material-ui": "*",
     "react-popper": "^2.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",

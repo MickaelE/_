@@ -1,0 +1,15 @@
+{
+  "Kläder": {
+    "skirt": "L",
+    "socks": "L"
+  },
+  "ownData": {
+    "firstName": "Mickael",
+    "lastName": "Eriksson",
+    "ownphone": "+46768519214",
+    "adress": "Ardennergatan 18D",
+    "zip": "27137",
+    "city": "Ystad",
+    "ownemail": "mickael@mickenet.com"
+  }
+}

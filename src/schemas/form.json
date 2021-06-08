@@ -1,0 +1,81 @@
+{
+  "title": "A registration form",
+  "description": "A simple form example with various formData return types per tab.",
+  "type": "object",
+  "properties": {
+    "ownData": {
+      "type": "object",
+      "title": "Vem är jag",
+      "required": [
+        "firstName",
+        "lastName"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "title": "First name"
+        },
+        "lastName": {
+          "type": "string",
+          "title": "Last name"
+        },
+        "adress": {
+          "type": "string",
+          "title": "Adress"
+        },
+        "zip": {
+          "type": "string",
+          "title": "Postnummer"
+        },
+        "city": {
+          "type": "string",
+          "title": "Postort"
+        },
+        "ownphone": {
+          "type": "string",
+          "title": "Mitt telefon nummer"
+        },
+        "ownemail": {
+          "type": "string",
+          "title": "Min mailadress"
+        }
+      }
+    },
+    "Kläder": {
+      "type": "object",
+      "title": "Kläder",
+      "properties": {
+        "skirt": {
+          "type": "string",
+          "title": "tröja",
+          "enum": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        "socks": {
+          "type": "string",
+          "title": "Strumpor",
+          "enum": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        }
+      }
+    },
+    "parents": {
+      "type": "string",
+      "title": "Min(a) föräldrar",
+      "properties": {
+        "currency": {
+          "type": "number",
+          "title": "Currency"
+        }
+      }
+    }
+  }
+}
