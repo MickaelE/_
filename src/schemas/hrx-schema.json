@@ -2,7 +2,7 @@
   "ui:page": {
     "onload": {
       "xhr:datasource": {
-        "url": "https://60154dbe55dfbd00174ca231.mockapi.io/api/2",
+        "url": "https://xmie-ot-backend.mdbgo.io/api/registration",
         "method": "GET",
         "headers": {},
         "payload": {},
@@ -11,42 +11,29 @@
     },
     "onsubmit": {
       "xhr:datasource": {
-        "url": "https://60154dbe55dfbd00174ca231.mockapi.io/api/2",
+        "url": "https://xmie-ot-backend.mdbgo.io/api/registration",
         "method": "PUT",
         "headers": {},
         "map:payload": {
-          "string": {
-            "firstName:first_name": "${string.firstName}",
-            "lastName:last_name": "${string.lastName}",
-            "select": "${string.select}",
-            "react-select:react_select": "${string.react-select}",
-            "upload": "${string.upload}",
-            "bio": "${string.bio}",
-            "date": "${string.date}",
-            "password": "${string.password}",
-            "telephone": "${string.telephone}"
+          "name" :"${ownData.firstName}",
+          "Lag" : "${ownData.lag}",
+          "address" : "${ownData.adress}",
+          "city" : "${ownData.city}",
+          "zip" : "${ownData.zip}",
+          "ownphone" : "${ownData.ownphone}",
+          "ownemail" : "${ownData.ownemail}",
+          "sizes": {
+            "Skirt" : "${sizes.skirt}",
+            "pants" : "${sizes.pants}",
+            "socks" : "${sizes.socks}"
           },
-          "integer": {
-            "customRating:custom_rating": "${integer.customRating}",
-            "age": "${integer.age}"
-          },
-          "number": {
-            "currency": "${number.currency}"
-          },
-          "boolean": {
-            "default": "${boolean.default}",
-            "radio": "${boolean.radio}"
-          },
-          "array": {
-            "multiSelect": "${array.multiSelect}",
-            "creatableSelectTest:creatable_select_test": "${array.creatableSelectTest}",
-            "selectTest:select_test": "${array.selectTest}"
-          },
-          "object": {
-            "customComponent:custom_component": {
-              "startDate:start_date": "${object.customComponent.startDate}",
-              "endDate:end_date": "${object.customComponent.endDate}"
-            }
+          "person": {
+            "momname" : "${parents.momName}",
+            "momephone" : "${parents.momPhone}",
+            "momemail" : "${parents.momsEmail}",
+            "dadname" : "${parents.dadName}",
+            "dadphone" : "${parents.dadPhone}",
+            "dadmail" : "${parents.dadEmail}"
           }
         },
         "map:results": "#/definitions/results"
@@ -58,7 +45,7 @@
       "xhrSelectTest": {
         "onload": {
           "xhr:datasource": {
-            "url": "https://60154dbe55dfbd00174ca231.mockapi.io/api",
+            "url": "https://xmie-ot-backend.mdbgo.io/api/registration",
             "method": "GET",
             "headers": {},
             "payload": {},

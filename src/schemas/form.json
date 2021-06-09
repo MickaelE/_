@@ -13,11 +13,19 @@
       "properties": {
         "firstName": {
           "type": "string",
-          "title": "First name"
+          "title": "Namn"
         },
-        "lastName": {
+        "lag": {
           "type": "string",
-          "title": "Last name"
+          "title": "Åldersgrupp",
+          "enum": [
+            "13-19 år (9/11-mannafotboll)",
+            "10—12 år (7-manna fotboll)",
+            "8 — 9 år (5-manna fotboll)",
+            "6 — 7 år (3-manna fotboll)",
+            "4-5 år (Boll & Lek)",
+            "Funktionsvariation (aktivitet)"
+          ]
         },
         "adress": {
           "type": "string",
@@ -49,6 +57,22 @@
           "type": "string",
           "title": "tröja",
           "enum": [
+            "110/120",
+            "130/140",
+            "150/160",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        "pants": {
+          "type": "string",
+          "title": "Shorts",
+          "enum": [
+            "110/120",
+            "130/140",
+            "150/160",
             "S",
             "M",
             "L",
@@ -59,21 +83,42 @@
           "type": "string",
           "title": "Strumpor",
           "enum": [
-            "S",
-            "M",
-            "L",
-            "XL"
+            "31-33",
+            "34-36",
+            "37-39",
+            "40-42",
+            "43-45"
           ]
         }
       }
     },
     "parents": {
-      "type": "string",
-      "title": "Min(a) föräldrar",
+      "type": "object",
+      "title": "Mina föräldrar",
       "properties": {
-        "currency": {
-          "type": "number",
-          "title": "Currency"
+        "momName": {
+          "type": "string",
+          "title": "Mammas namn"
+        },
+        "momPhone": {
+          "type": "string",
+          "title": "Mammas telefonnr."
+        },
+        "momsEmail": {
+          "type": "string",
+          "title": "Mammas email adress."
+        },
+        "dadName": {
+          "type": "string",
+          "title": "Pappas namn"
+        },
+        "dadPhone": {
+          "type": "string",
+          "title": "Pappas telefonnr."
+        },
+        "dadEmail": {
+          "type": "string",
+          "title": "Pappas email adress."
         }
       }
     }

@@ -2,12 +2,11 @@
 // <Registrations registrations={this.state.registrations} />
 import React, {Component} from 'react';
 import RegForm from './RegForm/RegForm'
-import MyWindowPortal from './MyWindowPortal'
+
 import {
     MDBCard,
     MDBCardBody,
     MDBCardText,
-    MDBCardTitle,
     MDBCol,
     MDBContainer,
     MDBIcon,
@@ -23,19 +22,8 @@ import {
     MDBTypography,
     MDBFooter
 } from 'mdb-react-ui-kit';
-import {MDBBtn} from "mdbreact";
 
 class App extends Component {
-
-    toggleWindowPortal() {
-        this.setState(state => ({
-            ...state,
-            showWindowPortal: !state.showWindowPortal,
-        }));
-    }
-    closeWindowPortal() {
-        this.setState({ showWindowPortal: false })
-    }
 
     componentDidMount() {
 
@@ -140,16 +128,15 @@ class App extends Component {
                     <MDBCol size='4' className='col-form'>
                         <MDBCard border="secondary" alignment='center' style={{maxWidth: '22rem'}}>
                             <MDBCardBody>
-                                <MDBCardText alignment='center'>
+                                <MDBCardText alignment='center' />
                                   <RegForm />
-                                </MDBCardText>
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCol>
                 </MDBRow>
 
                     </MDBContainer>
-                <MDBFooter backgroundColor='light' className='text-center text-lg-left'>
+                <MDBFooter backgroundcolor='light' className='text-center text-lg-left'>
                     <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                         &copy; {new Date().getFullYear()} Copyright:{' '}
                         <a className='text-dark' href='https://mickenet.com/'>
