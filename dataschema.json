@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome6",
+  "definitions": {
+    "Welcome6": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ownData": {
+          "$ref": "#/definitions/OwnData"
+        },
+        "parents": {
+          "$ref": "#/definitions/Parents"
+        },
+        "sizes": {
+          "$ref": "#/definitions/Sizes"
+        }
+      },
+      "required": [
+        "ownData",
+        "parents",
+        "sizes"
+      ],
+      "title": "Welcome6"
+    },
+    "OwnData": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lag": {
+          "type": "string"
+        },
+        "adress": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "ownphone": {
+          "type": "string"
+        },
+        "ownemail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "adress",
+        "city",
+        "firstName",
+        "lag",
+        "ownemail",
+        "ownphone",
+        "zip"
+      ],
+      "title": "OwnData"
+    },
+    "Parents": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "momName": {
+          "type": "string"
+        },
+        "momPhone": {
+          "type": "string"
+        },
+        "momsEmail": {
+          "type": "string"
+        },
+        "dadName": {
+          "type": "string"
+        },
+        "dadPhone": {
+          "type": "string"
+        },
+        "dadEmail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "dadEmail",
+        "dadName",
+        "dadPhone",
+        "momName",
+        "momPhone",
+        "momsEmail"
+      ],
+      "title": "Parents"
+    },
+    "Sizes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "skirt": {
+          "type": "string"
+        },
+        "pants": {
+          "type": "string"
+        },
+        "socks": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pants",
+        "skirt",
+        "socks"
+      ],
+      "title": "Sizes"
+    }
+  }
+}
