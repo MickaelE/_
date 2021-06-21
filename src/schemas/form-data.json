@@ -1,24 +1,3 @@
 {
-  "Kläder": {
-    "skirt": "L",
-    "pants": "L",
-    "socks": "L"
-  },
-  "ownData": {
-    "firstName": "Nisse",
-    "lastName": "Eriksson",
-    "ownphone": "+4670123456",
-    "adress": "Kattgatan 1A",
-    "zip": "00000",
-    "city": "Kattby",
-    "ownemail": "nisse@nisse.com"
-  },
-  "parents": {
-    "momName": "",
-    "momPhone": "",
-    "momsEmail": "",
-    "dadName": "",
-    "dadPhone": "",
-    "dadEmail": ""
-  }
+
 }

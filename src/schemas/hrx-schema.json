@@ -2,7 +2,7 @@
   "ui:page": {
     "onload": {
       "xhr:datasource": {
-        "url": "https://xmie-ot-backend.mdbgo.io/api/registration",
+        "url": "https://xmie-ot-data.mdbgo.io/api/registrations",
         "method": "GET",
         "headers": {},
         "payload": {},
@@ -11,30 +11,21 @@
     },
     "onsubmit": {
       "xhr:datasource": {
-        "url": "https://xmie-ot-backend.mdbgo.io/api/registration",
-        "method": "PUT",
+        "url": "https://xmie-ot-data.mdbgo.io/api/registration",
+        "method": "POST",
         "headers": {},
         "map:payload": {
-          "name" :"${ownData.firstName}",
-          "Lag" : "${ownData.lag}",
-          "address" : "${ownData.adress}",
-          "city" : "${ownData.city}",
-          "zip" : "${ownData.zip}",
-          "ownphone" : "${ownData.ownphone}",
-          "ownemail" : "${ownData.ownemail}",
-          "sizes": {
-            "Skirt" : "${sizes.skirt}",
-            "pants" : "${sizes.pants}",
-            "socks" : "${sizes.socks}"
+          "owndata": {
+            "firstName:firstName" :"${ownData.firstName}",
+            "lag:lag" : "${ownData.lag}",
+            "adress:adress" : "${ownData.adress}",
+            "city:city" : "${ownData.city}",
+            "zip:zip" : "${ownData.zip}",
+            "ownphone:ownphone" : "${ownData.ownphone}",
+            "ownemail:ownemail" : "${ownData.ownemail}"
           },
-          "person": {
-            "momname" : "${parents.momName}",
-            "momephone" : "${parents.momPhone}",
-            "momemail" : "${parents.momsEmail}",
-            "dadname" : "${parents.dadName}",
-            "dadphone" : "${parents.dadPhone}",
-            "dadmail" : "${parents.dadEmail}"
-          }
+          "sizes": {},
+          "parents":{}
         },
         "map:results": "#/definitions/results"
       }
@@ -45,7 +36,7 @@
       "xhrSelectTest": {
         "onload": {
           "xhr:datasource": {
-            "url": "https://xmie-ot-backend.mdbgo.io/api/registration",
+            "url": "https://xmie-ot-data.mdbgo.io/api/registration",
             "method": "GET",
             "headers": {},
             "payload": {},

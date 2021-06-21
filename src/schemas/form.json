@@ -1,17 +1,16 @@
 {
   "title": "Registrera dig",
-  "description": ".",
   "type": "object",
   "properties": {
     "ownData": {
       "type": "object",
       "title": "Vem är jag",
       "required": [
-        "firstName",
-        "lastName"
+        "name",
+        "lag"
       ],
       "properties": {
-        "firstName": {
+        "name": {
           "type": "string",
           "title": "Namn"
         },
@@ -19,15 +18,15 @@
           "type": "string",
           "title": "Åldersgrupp",
           "enum": [
-            "13-19 år (9/11-mannafotboll)",
-            "10—12 år (7-manna fotboll)",
-            "8 — 9 år (5-manna fotboll)",
-            "6 — 7 år (3-manna fotboll)",
+            "13-19 år (9/11-manna)",
+            "10—12 år (7-manna)",
+            "8 — 9 år (5-manna)",
+            "6 — 7 år (3-manna)",
             "4-5 år (Boll & Lek)",
             "Funktionsvariation (aktivitet)"
           ]
         },
-        "adress": {
+        "address": {
           "type": "string",
           "title": "Adress"
         },
@@ -49,9 +48,9 @@
         }
       }
     },
-    "Kläder": {
+    "sizes": {
       "type": "object",
-      "title": "Kläder",
+      "title": "Storlekar",
       "properties": {
         "skirt": {
           "type": "string",
@@ -66,7 +65,7 @@
             "XL"
           ]
         },
-        "pants": {
+        "shorts": {
           "type": "string",
           "title": "Shorts",
           "enum": [
