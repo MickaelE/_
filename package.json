@@ -16,6 +16,7 @@
     "mdb-cli": "^3.3.0",
     "mdb-react-ui-kit": "^1.0.0-beta5",
     "mdbreact": "^4.14.0",
+    "npm": "^7.18.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.0",
     "react-bs-datatable": "*",

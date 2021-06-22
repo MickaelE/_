@@ -1,24 +1,23 @@
 // @ts-ignore
 import React from 'react';
-import MaterialJsonSchemaForm from 'react-jsonschema-form-material-ui';
+import MaterialJsonSchemaForm from 'react-jsonschema-form';
 
 // Internals
 import givenSchema from '../schemas/form.json';
 import givenUISchema from '../schemas/ui-schema.json';
 import givenFormData from '../schemas/form-data.json';
 
-
-
 export default function RegForm() {
     const [formData, setFormData] = React.useState(givenFormData);
 
     const onSubmit = (value, callback) => {
 
+        var json = JSON.stringify(formData);
         const url = 'http://localhost:3001/api/registration'
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ formData})
+            body: json
         };
         fetch(url, requestOptions)
             .then(response => console.log('Submitted successfully'))
