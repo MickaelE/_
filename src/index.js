@@ -4,7 +4,7 @@ import './index.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import Header from './MenuComp/Header';
+import Header from './Header';
 import Footer from './Footer';
 import Home from "./HomeComp/Home";
 import Idrott from "./HomeComp/Idrott";
