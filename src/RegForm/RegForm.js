@@ -1,18 +1,21 @@
 // @ts-ignore
-import React from 'react';
+import React, {useState} from 'react';
 import MaterialJsonSchemaForm from "@rjsf/material-ui";
-
+import  { Redirect} from "react-router-dom";
 // Internals
 import givenSchema from '../schemas/form.json';
 import givenUISchema from '../schemas/ui-schema.json';
 import givenFormData from '../schemas/form-data.json';
 
+
 export default function RegForm() {
     const [formData, setFormData] = React.useState(givenFormData);
+    const [submitted, setSubmitted] = useState(false);
     const divStyle = {
         marginLeft: '10%',
         marginRight: '40%',
     };
+
     const onSubmit = (value, callback) => {
 
         var json = JSON.stringify(formData);
@@ -23,8 +26,17 @@ export default function RegForm() {
             body: json
         };
         fetch(url, requestOptions)
-            .then(response => console.log('Submitted successfully'))
+            .then(response =>{
+                setSubmitted(true)
+                return response.json()
+            } )
             .catch(error => console.log('Form submit error', error))
+        if (submitted) {
+            return <Redirect push to={{
+                pathname: '/'
+            }}
+            />
+        }
     }
     const onCancel = () => {
         console.log('on reset being called');

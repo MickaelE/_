@@ -11,7 +11,7 @@
         "address",
         "zip",
         "city",
-        "ownphone"
+        "myPhone"
       ],
       "properties": {
         "name": {
@@ -42,11 +42,11 @@
           "type": "string",
           "title": "Postort"
         },
-        "ownphone": {
+        "myPhone": {
           "type": "string",
           "title": "Mitt telefon nummer"
         },
-        "ownemail": {
+        "myEmail": {
           "type": "string",
           "title": "Min mailadress"
         }
@@ -99,27 +99,27 @@
       "type": "object",
       "title": "Mina föräldrar",
       "properties": {
-        "momName": {
+        "momsName": {
           "type": "string",
           "title": "Mammas namn"
         },
-        "momPhone": {
+        "momsPhone": {
           "type": "string",
           "title": "Mammas telefonnr."
         },
-        "momsEmail": {
+        "momsMail": {
           "type": "string",
           "title": "Mammas email adress."
         },
-        "dadName": {
+        "dadsName": {
           "type": "string",
           "title": "Pappas namn"
         },
-        "dadPhone": {
+        "dadsPhone": {
           "type": "string",
           "title": "Pappas telefonnr."
         },
-        "dadEmail": {
+        "dadsMail": {
           "type": "string",
           "title": "Pappas email adress."
         }

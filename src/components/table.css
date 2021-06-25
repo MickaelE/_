@@ -1,6 +1,8 @@
 .title{
     font-size: 18pt;
-    color: blueviolet;
+    color: blue;
+    font-style: oblique;
+    text-decoration: underline;
 }
 
 .item{
@@ -12,4 +14,10 @@
 .body{
     font-size: 16pt;
     color: black;
+}
+.table{
+    width: 50%;
+}
+th{
+    color: blue;
 }

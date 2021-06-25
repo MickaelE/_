@@ -42,10 +42,10 @@
         "city": {
           "type": "string"
         },
-        "ownphone": {
+        "myPhone": {
           "type": "string"
         },
-        "ownemail": {
+        "myEmail": {
           "type": "string"
         }
       },

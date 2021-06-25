@@ -5,6 +5,7 @@
   "dependencies": {
     "@ashvin27/react-datatable": "^1.5.3",
     "@popperjs/core": "^2.6.0",
+    "@rjsf/material-ui": "^2.5.1",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -25,6 +26,7 @@
     "react-jsonschema-form": "^1.8.1",
     "react-jsonschema-form-material-ui": "*",
     "react-popper": "^2.2.4",
+    "react-popupbox": "^2.0.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-table": "^7.7.0",

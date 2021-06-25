@@ -18,6 +18,7 @@ const routing = (
             <Header />
             <hr />
             <Switch>
+                <Route exact path="/" component={Home}/>
                 <Route exact path="/Home/" component={Home}/>
                 <Route exact path="/Ungdomar/" component={Idrott}/>
                 <Route exact path="/reg/" component={Reg}/>
