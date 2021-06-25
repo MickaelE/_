@@ -1,37 +1,67 @@
-import React from "react";
+import React, { Component } from 'react';
+import './table.css';
 
-import * as WebDataRocksReact from './webdatarocks.react';
+export class DataTableComponent extends Component {
 
-export class DataTableComponent extends React.Component {
-
-    myRef = null;
-
-    constructor(props) {
+    constructor(props){
         super(props);
-        this.myRef = React.createRef();
+        this.state = {
+            error : null,
+            isLoaded : false,
+            posts :[]
+        };
     }
 
-    reportComplete = () => {
-        console.log(">>>>>", this.myRef.webdatarocks.getReport());
-    }
+    componentDidMount() {
+        // I will use fake api from jsonplaceholder website
+        // this return 100 posts
+        fetch("https://xmie-ot-data.mdbgo.io/api/registrations")
+            .then( response => response.json())
+            .then(
+                // handle the result
+                (result) => {
+                    this.setState({
+                        isLoaded : true,
+                        posts : result.data
+                    });
+                },
 
+                // Handle error
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    })
+                },
+            )
+    }
     render() {
+        const {error, isLoaded, posts} = this.state;
 
-        return (
-
-            <div>
-                <WebDataRocksReact.Pivot
-                    ref={(elem) => {
-                        this.myRef = elem
-                    }}
-                    toolbar={true}
-                    report="http://localhost:3001/api/registrations"
-                    reportcomplete={() => {
-                        this.reportComplete();
-                    }}
-                />
-            </div>
-        );
+        if(error){
+            return <div>Error in loading</div>
+        }else if (!isLoaded) {
+            return <div>Loading ...</div>
+        }else{
+            return(
+                <div>
+                    <ol>
+                        {
+                            posts.map(post => (
+                                post.ownData.map( ownData =>(
+                                <li key={post.id} align="start">
+                                    <div>
+                                        <p className="title">{ownData.name}</p>
+                                        <p className="body">{ownData.lag}, {ownData.address}</p>
+                                    </div>
+                                </li>
+                                ))
+                            ))
+                        }
+                    </ol>
+                </div>
+            );
+        }
     }
 }
 export default DataTableComponent

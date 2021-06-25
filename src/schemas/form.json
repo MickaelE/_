@@ -7,7 +7,11 @@
       "title": "Vem är jag",
       "required": [
         "name",
-        "lag"
+        "lag",
+        "address",
+        "zip",
+        "city",
+        "ownphone"
       ],
       "properties": {
         "name": {
