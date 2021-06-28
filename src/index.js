@@ -6,11 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
-import Home from "./HomeComp/Home";
-import Idrott from "./HomeComp/Idrott";
-import Reg from "./RegForm/RegForm";
+import Home from "./components/Home";
+import Idrott from "./components/Idrott";
+import Reg from "./components/RegForm";
 import Login from "./Login/login.component";
 import DataTableComponent from "./components/Component.DataTableComponent";
+import ProtectedRoute from "./Login/ProtectedRoute";
 
 const routing = (
     <Router>
@@ -18,12 +19,13 @@ const routing = (
             <Header />
             <hr />
             <Switch>
+
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/Home/" component={Home}/>
                 <Route exact path="/Ungdomar/" component={Idrott}/>
                 <Route exact path="/reg/" component={Reg}/>
-                <Route exact path="/admin/" component={Login}/>
-                <Route path="/dataTable/" component={DataTableComponent} />
+                <ProtectedRoute path="/admin/" component={Login}/>
+                <ProtectedRoute path="/dataTable/" component={DataTableComponent} />
             </Switch>
             <Footer />
         </div>
