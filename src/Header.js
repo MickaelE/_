@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-    MDBContainer,
+    MDBContainer, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle,
     MDBIcon,
     MDBNavbar,
     MDBNavbarItem,
@@ -34,7 +34,7 @@ class Header extends Component {
                             <MDBIcon fas icon='bars'/>
                         </MDBNavbarToggler>
                         <div className='collapse navbar-collapse' id='navbarExample01'>
-                            <MDBNavbarNav right className='mb-2 mb-lg-0'>
+                            <MDBNavbarNav right className='mb-1 mb-lg-0'>
                                 <MDBNavbarItem active>
                                     <MDBNavbarLink href='/home/'>
                                         Hem
@@ -46,12 +46,19 @@ class Header extends Component {
                                 <MDBNavbarItem>
                                     <MDBNavbarLink href='/reg/'>Anmälan</MDBNavbarLink>
                                 </MDBNavbarItem>
-                                <MDBNavbarItem>
-                                    <MDBNavbarLink href='/admin/'>Admin</MDBNavbarLink>
-                                </MDBNavbarItem>
-                                <MDBNavbarItem>
-                                    <MDBNavbarLink href='/dataTable/'>Rapport</MDBNavbarLink>
-                                </MDBNavbarItem>
+                                <MDBDropdown>
+                                <MDBDropdownToggle tag='a' className='nav-link'>
+                                   För ledare
+                            </MDBDropdownToggle>
+                                <MDBDropdownMenu>
+                                    <MDBDropdownItem>
+                                        <MDBNavbarLink href='#'>Logga in</MDBNavbarLink>
+                                    </MDBDropdownItem>
+                                    <MDBDropdownItem>
+                                    <MDBNavbarLink href='/dataTable/'>Visa Rapport</MDBNavbarLink>
+                                    </MDBDropdownItem>
+                                </MDBDropdownMenu>
+                            </MDBDropdown>
                             </MDBNavbarNav>
                         </div>
                     </MDBContainer>

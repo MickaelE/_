@@ -10,7 +10,7 @@ class Home extends Component {
 
     render() {
         return (
-                <body>
+
                 <MDBContainer>
                     <MDBTypography variant='h5'>Mål och Vision</MDBTypography>
 
@@ -29,7 +29,6 @@ class Home extends Component {
                         Någon form av Bingolotter till jul kan man ej köpa sig fri ifrån.
                     </MDBTypography>
                 </MDBContainer>
-                </body>
         );
     }
 }
